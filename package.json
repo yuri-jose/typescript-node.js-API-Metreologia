@@ -1,0 +1,44 @@
+{
+  "name": "typscript-api",
+  "version": "1.0.0",
+  "description": "typescript node.js API",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "yarn build && node dist/src/index.js",
+    "start:local": "ts-node-dev --transpile-only src/index.ts",
+    "start:dev": "ts-node-dev 'src/index.ts'",
+    "lint": "eslint ./src ./test --ext .ts",
+    "lint:fix": "eslint ./src ./test --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:functional": "jest --projects ./test --forceExit --runInBand"
+  },
+  "keywords": [
+    "node.js",
+    "typescript",
+    "API"
+  ],
+  "author": "Yuri José Rego",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/jest": "^29.2.3",
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^18.11.9",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint": "^8.27.0",
+    "jest": "^29.3.1",
+    "supertest": "^6.3.1",
+    "ts-jest": "^29.0.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@overnightjs/core": "^1.7.6",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "module-alias": "^2.2.2"
+  }
+}
